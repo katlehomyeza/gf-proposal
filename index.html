@@ -6,12 +6,16 @@
   <title>Will you be my girlfriend?</title>
   <link rel="stylesheet" href="style.css">
   <!-- EmailJS CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("7m_HRkPXzpNvKeEyz"); // from EmailJS dashboard
-    })();
-  </script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: process.env.EMAIL_PUBLIC_KEY,
+      });
+   })();
+</script>
 </head>
 <body>
   <div class="container">
