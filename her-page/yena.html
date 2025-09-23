@@ -1,32 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Memories 💕</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      padding: 20px;
-    }
-    .grid img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loving You</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1 style="text-align:center;">Our Memories 💕</h1>
-  <div class="grid">
-    <img src="img1.jpg">
-    <img src="img2.jpg">
-    <img src="img3.jpg">
-    <!-- add more -->
-  </div>
+<iframe id="musicPlayer" 
+    width="100%" 
+    height="300" 
+    scrolling="no" 
+    frameborder="no" 
+    allow="autoplay" 
+    style="display: none;"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1428120055&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+</iframe>
+    <div class="container" onclick="startMusic()">
+        <!-- Header with cute title -->
+        <div class="header">
+            <h1 class="main-title">My Ode To Sinalo THomas (Myeza)</h1>
+            <div class="header-hearts">
+                <span class="heart">♥</span>
+                <span class="sparkle">✨</span>
+                <span class="heart small">♥</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Main large picture of her -->
+            <div class="main-photo-section">
+                <div class="polaroid main-polaroid">
+                    <img src="/main-girlfriend-portrait.jpg" alt="Beautiful portrait" class="main-photo">
+                    <div class="photo-caption">
+                        <p class="caption-text">My Beautiful Girl ♡</p>
+                        <p class="caption-subtitle">The light of my life</p>
+                    </div>
+                    <span class="decorative-heart top-right">♥</span>
+                    <span class="decorative-heart bottom-left">♥</span>
+                </div>
+            </div>
+
+            <!-- Handwritten letter section -->
+            <div class="letter-section">
+                <div class="handwritten-letter">
+                    <div class="letter-header">
+                        <span class="heart">♥</span>
+                        <span class="letter-title">My Dearest Love</span>
+                        <span class="heart">♥</span>
+                    </div>
+
+                    <p class="letter-paragraph">
+                        Every moment with you feels like a beautiful dream that I never want to wake up from. Your smile lights up my world brighter than a thousand stars.
+                    </p>
+
+                    <p class="letter-paragraph">
+                        I love how you laugh at my silly jokes, how you make everything better just by being there, and how you turn ordinary days into extraordinary adventures.
+                    </p>
+
+                    <p class="letter-paragraph">
+                        These photos capture just a few of our precious memories, but my heart holds millions more. Thank you for being my everything.
+                    </p>
+
+                    <div class="letter-footer">
+                        <div class="signature-line">Forever yours,</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+
+                    <div class="signature">Your Loving Partner ♡</div>
+                    
+                    <div class="letter-decorations">
+                        <div class="decoration top-right"></div>
+                        <div class="decoration bottom-left"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Moments Section -->
+        <div class="moments-section">
+            <h2 class="section-title">Our Moments</h2>
+            <div class="photo-collage">
+                <div class="photo-item" data-rotation="-3">
+                    <img src="/romantic-couple-sunset-beach-walk.jpg" alt="Our first beach sunset">
+                    <div class="photo-info">
+                        <p class="photo-caption">Our first beach sunset</p>
+                        <p class="photo-date">📅 Summer 2023</p>
+                        <p class="photo-location">📍 Malibu Beach</p>
+                    </div>
+                    <span class="photo-heart">♥</span>
+                </div>
+
+                <div class="photo-item" data-rotation="2">
+                    <img src="/couple-laughing-coffee-shop-date.jpg" alt="Coffee shop giggles">
+                    <div class="photo-info">
+                        <p class="photo-caption">Coffee shop giggles</p>
+                        <p class="photo-date">📅 Fall 2023</p>
+                        <p class="photo-location">📍 Downtown Café</p>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-rotation="-1">
+                    <img src="/couple-hiking-mountain-view.png" alt="Adventure buddies">
+                    <div class="photo-info">
+                        <p class="photo-caption">Adventure buddies</p>
+                        <p class="photo-date">📅 Spring 2024</p>
+                        <p class="photo-location">📍 Mountain Trail</p>
+                    </div>
+                    <div class="yellow-dot"></div>
+                </div>
+
+                <div class="photo-item" data-rotation="4">
+                    <img src="/couple-cooking-kitchen.png" alt="Cooking disasters">
+                    <div class="photo-info">
+                        <p class="photo-caption">Cooking disasters</p>
+                        <p class="photo-date">📅 Winter 2023</p>
+                        <p class="photo-location">📍 Our Kitchen</p>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-rotation="-2">
+                    <img src="/couple-dancing-living-room.jpg" alt="Living room dance party">
+                    <div class="photo-info">
+                        <p class="photo-caption">Living room dance party</p>
+                        <p class="photo-date">📅 New Year 2024</p>
+                        <p class="photo-location">📍 Home Sweet Home</p>
+                    </div>
+                    <span class="photo-heart">♥</span>
+                </div>
+
+                <div class="photo-item" data-rotation="1">
+                    <img src="/couple-picnic-park-flowers.jpg" alt="Perfect picnic day">
+                    <div class="photo-info">
+                        <p class="photo-caption">Perfect picnic day</p>
+                        <p class="photo-date">📅 Spring 2024</p>
+                        <p class="photo-location">📍 Central Park</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spotify Section -->
+        <div class="spotify-section">
+            <div class="spotify-player">
+                <div class="spotify-info">
+                    <div class="song-details">
+                        <h3 class="song-title">Perfect</h3>
+                        <p class="artist-name">Ed Sheeran</p>
+                    </div>
+                    <div class="album-art">
+                        <div class="music-note">🎵</div>
+                    </div>
+                </div>
+                <a href="https://open.spotify.com/track/0tgVpDi06FyKpA1z0VMD4v" target="_blank" class="spotify-button">
+                    <span class="spotify-icon">🎵</span>
+                    Listen on Spotify
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating decorative elements -->
+        <div class="floating-decorations">
+            <span class="floating-heart" style="top: 10%; left: 5%;">♥</span>
+            <span class="floating-sparkle" style="top: 15%; right: 10%;">✨</span>
+            <span class="floating-music" style="bottom: 20%; left: 8%;">🎵</span>
+            <span class="floating-camera" style="bottom: 10%; right: 5%;">📷</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

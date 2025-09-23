@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Kalam", cursive;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 50%, #e91e63 100%);
+    min-height: 100vh;
+    color: #2d1b69;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Header Styles */
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .main-title {
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #c2185b;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-hearts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .heart {
+    color: #e91e63;
+    font-size: 1.5rem;
+    animation: heartbeat 2s ease-in-out infinite;
+  }
+  
+  .heart.small {
+    font-size: 1rem;
+  }
+  
+  .sparkle {
+    color: #ff4081;
+    font-size: 1.2rem;
+    animation: sparkle 3s ease-in-out infinite;
+  }
+  
+  /* Main Content Layout */
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+  
+  /* Main Photo Section */
+  .main-photo-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .main-polaroid {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: rotate(1deg);
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .main-polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+  }
+  
+  .main-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .photo-caption {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .caption-text {
+    font-family: "Kalam", cursive;
+    font-size: 1.2rem;
+    color: #2d1b69;
+    margin-bottom: 0.5rem;
+  }
+  
+  .caption-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .decorative-heart {
+    position: absolute;
+    color: #e91e63;
+    font-size: 1.5rem;
+    animation: heartbeat 2s ease-in-out infinite;
+  }
+  
+  .decorative-heart.top-right {
+    top: -8px;
+    right: -8px;
+  }
+  
+  .decorative-heart.bottom-left {
+    bottom: -8px;
+    left: -8px;
+    font-size: 1rem;
+    color: #ff4081;
+  }
+  
+  /* Letter Section */
+  .letter-section {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .handwritten-letter {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #ff4081;
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.2);
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease;
+    position: relative;
+    font-family: "Kalam", cursive;
+  }
+  
+  .handwritten-letter:hover {
+    transform: rotate(0deg);
+  }
+  
+  .letter-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .letter-title {
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    color: #c2185b;
+    font-weight: 600;
+  }
+  
+  .letter-paragraph {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #2d1b69;
+    font-size: 1.1rem;
+  }
+  
+  .letter-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .signature-line {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.3rem;
+    color: #c2185b;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 0.2rem;
+  }
+  
+  .star {
+    color: #ffc107;
+    font-size: 1rem;
+  }
+  
+  .signature {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.8rem;
+    color: #c2185b;
+    font-weight: 700;
+  }
+  
+  .letter-decorations .decoration {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+  
+  .letter-decorations .decoration.top-right {
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background: #f8bbd9;
+  }
+  
+  .letter-decorations .decoration.bottom-left {
+    bottom: -4px;
+    left: -4px;
+    width: 16px;
+    height: 16px;
+    background: #ff4081;
+  }
+  
+  /* Moments Section */
+  .moments-section {
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    color: #c2185b;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .photo-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .photo-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .photo-item:hover {
+    transform: rotate(0deg) !important;
+    box-shadow: 0 12px 30px rgba(233, 30, 99, 0.3);
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .photo-info {
+    margin-top: 1rem;
+  }
+  
+  .photo-caption {
+    font-weight: 600;
+    color: #2d1b69;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .photo-date,
+  .photo-location {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.2rem;
+  }
+  
+  .photo-heart {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    color: #e91e63;
+    font-size: 1rem;
+    animation: heartbeat 2s ease-in-out infinite;
+  }
+  
+  .yellow-dot {
+    position: absolute;
+    bottom: -4px;
+    left: -4px;
+    width: 12px;
+    height: 12px;
+    background: #ffc107;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+  
+  /* Spotify Section */
+  .spotify-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .spotify-player {
+    background: linear-gradient(135deg, #1db954 0%, #1ed760 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(29, 185, 84, 0.3);
+    color: white;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .spotify-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  .song-title {
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .artist-name {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  .album-art {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .music-note {
+    font-size: 2rem;
+  }
+  
+  .spotify-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #1db954;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
+  }
+  
+  .spotify-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .spotify-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Floating Decorations */
+  .floating-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .floating-heart,
+  .floating-sparkle,
+  .floating-music,
+  .floating-camera {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .floating-heart {
+    color: #e91e63;
+    animation-delay: 0s;
+  }
+  
+  .floating-sparkle {
+    color: #ff4081;
+    animation-delay: 1s;
+  }
+  
+  .floating-music {
+    color: #1db954;
+    animation-delay: 2s;
+  }
+  
+  .floating-camera {
+    color: #ff4081;
+    animation-delay: 3s;
+  }
+  
+  /* Animations */
+  @keyframes heartbeat {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes sparkle {
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: rotate(180deg);
+    }
+  }
+  
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .main-title {
+      font-size: 2.5rem;
+    }
+  
+    .photo-collage {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+  
+    .container {
+      padding: 1rem;
+    }
+  }
+  
+  /* Apply rotations */
+  .photo-item[data-rotation="-3"] {
+    transform: rotate(-3deg);
+  }
+  .photo-item[data-rotation="-2"] {
+    transform: rotate(-2deg);
+  }
+  .photo-item[data-rotation="-1"] {
+    transform: rotate(-1deg);
+  }
+  .photo-item[data-rotation="1"] {
+    transform: rotate(1deg);
+  }
+  .photo-item[data-rotation="2"] {
+    transform: rotate(2deg);
+  }
+  .photo-item[data-rotation="4"] {
+    transform: rotate(4deg);
+  }
+  
