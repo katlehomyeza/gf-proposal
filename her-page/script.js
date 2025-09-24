@@ -111,6 +111,25 @@ document.addEventListener("DOMContentLoaded", () => {
     
   })
 
+  fetch('http://localhost:3000/photos')
+      .then(res => res.json())
+      .then(files => {
+        const collage = document.querySelector('.photo-collage');
+        files.forEach(file => {
+          console.log(file);
+          const div = document.createElement('div');
+          div.className = 'photo-item';
+          div.innerHTML = `
+            <img src="/assets/her photos/${file}" alt="">
+            <div class="photo-info">
+              <p class="photo-caption">10/10 minus nothing!</p>
+            </div>
+          `;
+          collage.appendChild(div);
+        });
+      })
+      .catch(console.error);
+
 
   
 
