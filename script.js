@@ -18,6 +18,12 @@ yesBtn.addEventListener('click', () => {
 });
 
 noBtn.addEventListener('click', () => {
-  noVideo.style.display = 'block';
+  videoModal.style.display = 'flex';
+  noVideo.currentTime = 0;          
   noVideo.play();
+});
+
+noVideo.addEventListener('ended', () => {
+  videoModal.style.display = 'none';
+  noVideo.pause();
 });
