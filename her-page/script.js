@@ -111,24 +111,50 @@ document.addEventListener("DOMContentLoaded", () => {
     
   })
 
-  fetch('http://localhost:3000/photos')
-      .then(res => res.json())
-      .then(files => {
-        const collage = document.querySelector('.photo-collage');
-        files.forEach(file => {
-          console.log(file);
-          const div = document.createElement('div');
-          div.className = 'photo-item';
-          div.innerHTML = `
-            <img src="/assets/her photos/${file}" alt="">
-            <div class="photo-info">
-              <p class="photo-caption">10/10 minus nothing!</p>
-            </div>
-          `;
-          collage.appendChild(div);
-        });
-      })
-      .catch(console.error);
+  const files = [
+    "Photo 2025-09-18, 00 05 23 (1).jpg",
+    "Photo 2025-09-18, 00 05 23.jpg",
+    "Photo 2025-09-19, 21 59 30.jpg",
+    "Photo 2025-09-19, 21 59 32.jpg",
+    "Photo 2025-09-19, 21 59 36.jpg",
+    "Photo 2025-09-19, 21 59 38.jpg",
+    "Photo 2025-09-20, 23 07 57 (1).jpg",
+    "Photo 2025-09-20, 23 07 57.jpg",
+    "Photo 2025-09-20, 23 07 58.jpg",
+    "Photo 2025-09-20, 23 07 59 (1).jpg",
+    "Photo 2025-09-20, 23 07 59.jpg",
+    "Photo 2025-09-20, 23 08 00.jpg",
+    "Photo 2025-09-20, 23 08 01.jpg",
+    "Photo 2025-09-20, 23 08 03 (1) (1).jpg",
+    "Photo 2025-09-20, 23 08 03 (1).jpg",
+    "Photo 2025-09-20, 23 08 03.jpg",
+    "Photo 2025-09-20, 23 08 04.jpg",
+    "Photo 2025-09-21, 21 05 37.png",
+    "Photo 2025-09-23, 12 20 36 (1).jpg",
+    "Photo 2025-09-23, 12 20 36 (10).jpg",
+    "Photo 2025-09-23, 12 20 36 (2).jpg",
+    "Photo 2025-09-23, 12 20 36 (3).jpg",
+    "Photo 2025-09-23, 12 20 36 (4).jpg",
+    "Photo 2025-09-23, 12 20 36 (5).jpg",
+    "Photo 2025-09-23, 12 20 36 (6) (1).jpg",
+    "Photo 2025-09-23, 12 20 36 (6).jpg",
+    "Photo 2025-09-23, 12 20 36 (7).jpg",
+    "Photo 2025-09-23, 12 20 36 (8).jpg",
+    "Photo 2025-09-23, 12 20 36 (9).jpg",
+    "Photo 2025-09-23, 12 20 36.jpg"
+  ];
+  const collage = document.querySelector('.photo-collage');
+  files.forEach(file => {
+    const div = document.createElement('div');
+    div.className = 'photo-item';
+    div.innerHTML = `
+      <img src="/assets/her photos/${file}" alt="">
+      <div class="photo-info">
+        <p class="photo-caption">10/10 minus nothing!</p>
+      </div>
+    `;
+    collage.appendChild(div);
+  });
 
 
   
