@@ -3,11 +3,15 @@ const noBtn = document.getElementById('noBtn');
 const noVideo = document.getElementById('noVideo');
 
 yesBtn.addEventListener('click', () => {
-  emailjs.send(process.env.SERVICE_ID, process.env.EMAIL_TEMPLATE_ID, {
-    email: "katlehomyeza15@gmail.com",
-    to_name: "Katleho Myeza",
-    from_name: "Proposal Site",
-    message: "She said YES! 🎉"
+  fetch('http://localhost:3000/email', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: "katlehomyeza15@gmail.com",
+      to_name: "Katleho Myeza",
+      from_name: "Proposal Site",
+      message: "She said YES! 🎉"
+    })
   })
   .then(() => {
     window.location.href = './her-page/yena.html';
