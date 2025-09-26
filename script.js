@@ -7,7 +7,7 @@ yesBtn.addEventListener('click', () => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      email: "katlehomyeza15@gmail.com",
+      email: "ksjmyeza@gmail.com",
       to_name: "Katleho Myeza",
       from_name: "Proposal Site",
       message: "She said YES! 🎉"
