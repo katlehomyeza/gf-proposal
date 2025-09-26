@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const div = document.createElement('div');
     div.className = 'photo-item';
     div.innerHTML = `
-      <img src="/assets/her photos/${file}" alt="">
+      <img src="https://katlehomyeza.github.io/gf-proposal/assets/her photos/${file}" alt="">
       <div class="photo-info">
         <p class="photo-caption">10/10 minus nothing!</p>
       </div>
