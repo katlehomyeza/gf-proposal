@@ -3,7 +3,7 @@ const noBtn = document.getElementById('noBtn');
 const noVideo = document.getElementById('noVideo');
 
 yesBtn.addEventListener('click', () => {
-  fetch('http://localhost:3000/email', {
+  fetch('https://gf-proposal-phi.vercel.app/api/email', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -18,6 +18,7 @@ yesBtn.addEventListener('click', () => {
   })
   .catch((err) => {
     console.error("Email error:", err);
+    window.location.href = './her-page/yena.html';
   });
 });
 
