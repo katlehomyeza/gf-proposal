@@ -5,20 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Will you be my girlfriend?</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Background video -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="./assets/her photos/vid3.mp4" type="video/mp4">
+
+  </video>
+
+  <!-- Page content -->
   <div class="container">
-    <h1>Will you be my girlfriend? 💖</h1>
+    <h1>Will you be my girlfriend?</h1>
+    <div class="heart">❤️</div>
     <div class="button-group">
-      <button id="yesBtn">Yes</button>
+      <button id="yesBtn">Yes, absolutely!</button>
       <button id="noBtn">No</button>
     </div>
-  <!-- add this just before </body> -->
+  </div>
+
   <div id="videoModal" class="modal">
     <div class="modal-content">
       <video id="noVideo" src="./assets/she never give me.mp4" controls></video>
     </div>
-  </div>
   </div>
 
   <script src="script.js"></script>
